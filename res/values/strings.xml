@@ -264,6 +264,16 @@
 	<string name="show_intro">Show Intro Dialog</string>
 	<string name="show_intro_summary">Check to show this next time</string>
 
+	<!--  DW begin LiveView strings -->
+    <!-- 
+    	The following strings needs to be defined in order for the Plugin to function.
+    -->
+    <string name="pluginname">WearAlarm plugin</string>
+    <string name="intent_preferences">com.wearalarm.liveview.PREFERENCES</string>
+    <string name="intent_service">com.wearalarm.liveview.wearalarmservice</string>
+    <string name="application_description">Extends:com.sonyericsson.extras.liveview</string>
+	<!--  DW end LiveView strings -->
+
 </resources>
 
 

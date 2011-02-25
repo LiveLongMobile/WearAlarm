@@ -42,7 +42,6 @@ import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -305,9 +304,9 @@ public class AlarmClock extends Activity implements OnItemClickListener {
         context.startActivity(intent);
     }
 
-    private void addNewAlarm() {
-        addNewAlarm(this);
-    }
+//    private void addNewAlarm() {
+//        addNewAlarm(this);
+//    }
 
     @Override
     protected void onDestroy() {

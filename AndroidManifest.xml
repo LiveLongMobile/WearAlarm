@@ -98,7 +98,8 @@
              intent. The service plays the alarm alert and vibrates the device.
              This allows the alert to continue playing even if another activity
              causes the AlarmAlert activity to pause. -->
-        <service android:name="AlarmKlaxon">
+        <!-- DW: use WearAlarmKlaxon instead of AlarmKlaxon to support liveview -->
+        <service android:name="com.wearalarm.liveview.WearAlarmKlaxon">
             <intent-filter>
                 <action android:name="com.android.deskclock.ALARM_ALERT" />
             </intent-filter>
@@ -119,6 +120,29 @@
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/analog_appwidget" />
         </receiver>
+        
+        <!-- DW begin liveview manifest -->
+        <service android:name="com.wearalarm.liveview.WearAlarmService"
+				 android:label="WearAlarm service">
+			<intent-filter>
+				<action android:name="com.wearalarm.liveview.wearalarmservice"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+        </service>
+        <activity android:name="com.sonyericsson.extras.liveview.plugins.PluginPreferences" 
+				  android:label="WearAlarm plugin preferences">
+			<intent-filter>
+				<action android:name="com.wearalarm.liveview.PREFERENCES"></action> 	
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+        </activity>
+	    <receiver android:name="com.sonyericsson.extras.liveview.plugins.PluginReceiver">
+			<intent-filter>
+				<action android:name="com.sonyericsson.extras.liveview.LAUNCH_PLUGIN" />
+			</intent-filter>
+	    </receiver>
+        <!-- DW end liveview manifest -->
+        
     </application>
 
 

@@ -154,7 +154,7 @@ public class AlarmKlaxon extends Service {
     // Volume suggested by media team for in-call alarms.
     private static final float IN_CALL_VOLUME = 0.125f;
 
-    private void play(Alarm alarm) {
+    protected void play(Alarm alarm) {
         // stop() checks to see if we are already playing.
         stop();
 
