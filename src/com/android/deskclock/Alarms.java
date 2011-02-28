@@ -41,7 +41,7 @@ public class Alarms {
     // This action triggers the AlarmReceiver as well as the AlarmKlaxon. It
     // is a public action used in the manifest for receiving Alarm broadcasts
     // from the alarm manager.
-    public static final String ALARM_ALERT_ACTION = "com.android.deskclock.ALARM_ALERT";
+    public static final String ALARM_ALERT_ACTION = "com.wearalarm.liveview.ALARM_ALERT";
 
     // This is a private action used by the AlarmKlaxon to update the UI to
     // show the alarm has been killed.

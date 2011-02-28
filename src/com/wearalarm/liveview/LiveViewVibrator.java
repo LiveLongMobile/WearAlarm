@@ -50,13 +50,7 @@ public class LiveViewVibrator {
 	private static final String TAG = "LiveViewVibrator";
 	private Context mContext;
 	
-	private void doVibrate() 
-	{
-		if( mBound && mService != null ) {
-			mService.vibrate(ON_TIME_MS);
-		}
-	}
-	
+
 	/**
 	 * LiveView only supports a single vibrate.  We want to continue to issue with an on/off period
 	 * until a wakeup happens.  This class handles the recurring vibrate
@@ -69,14 +63,15 @@ public class LiveViewVibrator {
 		}
 		public void run() {
 			if( mBound && mService != null ) {
-				doVibrate();
-				/**
-				 * Note- will be a no-op if cancel() has run on the timer
-				 */
-				mTimer.schedule(new RecurringVibrate(mTimer) , ON_TIME_MS + OFF_TIME_MS);
+				mService.vibrate(ON_TIME_MS);
+				Log.v(TAG,"start vibrate");
 			} else {
 				Log.w(TAG,"Attempt to vibrate with no bound service");
 			}
+			/**
+			 * Note- will be a no-op if cancel() has run on the timer
+			 */
+			mTimer.schedule(new RecurringVibrate(mTimer) , ON_TIME_MS + OFF_TIME_MS);
 		}
 		
 	}
@@ -91,7 +86,9 @@ public class LiveViewVibrator {
 		if( !mBound ) {
 			// Bind to Local Service
 	        Intent intent = new Intent(mContext, WearAlarmService.class);
-	        mContext.bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+	        if( !mContext.bindService(intent, mConnection, Context.BIND_AUTO_CREATE) ) {
+	        	Log.w(TAG, "bindService failed" );
+	        }
 		}
 	}
 	
@@ -104,6 +101,7 @@ public class LiveViewVibrator {
             // We've bound to LocalService, cast the IBinder and get LocalService instance
             LocalBinder binder = (LocalBinder) service;
             mService = binder.getService();
+            Log.v(TAG, "service bound" );
             mBound = true;
         }
 
@@ -129,6 +127,8 @@ public class LiveViewVibrator {
 	public void stop()
 	{
 		mVibrateTimer.cancel();
-		mContext.unbindService(mConnection);
+		if( mBound ) {
+			mContext.unbindService(mConnection);
+		}
 	}
 }

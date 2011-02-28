@@ -23,6 +23,8 @@
 
 package com.wearalarm.liveview;
 
+import android.util.Log;
+
 import com.android.deskclock.Alarm;
 import com.android.deskclock.AlarmKlaxon;
 
@@ -33,19 +35,26 @@ import com.android.deskclock.AlarmKlaxon;
 public class WearAlarmKlaxon extends AlarmKlaxon {
 
 	LiveViewVibrator mLiveViewVibe = null;
+	private static final String LOG_TAG = "WearAlarmKlaxon";
 	
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		Log.v(LOG_TAG, "onCreate");
 		mLiveViewVibe = new LiveViewVibrator(this.getApplicationContext());
 	}
 	
 	@Override
 	protected void play(Alarm alarm) {
+		super.play(alarm);
 		mLiveViewVibe.start();
+		Log.v(LOG_TAG, "play");
 	}
 	
+	@Override
 	public void stop() {
+		super.stop();
 		mLiveViewVibe.stop();
+		Log.v(LOG_TAG, "stop");
 	}
 }

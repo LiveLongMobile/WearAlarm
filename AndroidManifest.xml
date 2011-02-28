@@ -7,10 +7,9 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
+	<uses-sdk android:minSdkVersion="5"/>
     <application android:label="@string/app_label"
                  android:icon="@drawable/ic_launcher_alarmclock">
-
         <provider android:name="AlarmProvider" android:authorities="com.android.deskclock" />
 <!-- 
         <activity android:name="DeskClock"
@@ -86,7 +85,7 @@
 
         <receiver android:name="AlarmReceiver">
             <intent-filter>
-               <action android:name="com.android.deskclock.ALARM_ALERT" />
+               <action android:name="com.wearalarm.liveview.ALARM_ALERT" />
                <action android:name="alarm_killed" />
                <action android:name="cancel_snooze" />
             </intent-filter>
@@ -101,7 +100,7 @@
         <!-- DW: use WearAlarmKlaxon instead of AlarmKlaxon to support liveview -->
         <service android:name="com.wearalarm.liveview.WearAlarmKlaxon">
             <intent-filter>
-                <action android:name="com.android.deskclock.ALARM_ALERT" />
+                <action android:name="com.wearalarm.liveview.ALARM_ALERT" />
             </intent-filter>
         </service>
 
