@@ -23,10 +23,10 @@
 
 package com.wearalarm.liveview;
 
-import android.util.Log;
+import com.livelongmobile.wearalarm.Log;
+import com.livelongmobile.wearalarm.android.deskclock.Alarm;
+import com.livelongmobile.wearalarm.android.deskclock.AlarmKlaxon;
 
-import com.android.deskclock.Alarm;
-import com.android.deskclock.AlarmKlaxon;
 
 /**
  * Extends AlarmKlaxon to implement liveview vibrate

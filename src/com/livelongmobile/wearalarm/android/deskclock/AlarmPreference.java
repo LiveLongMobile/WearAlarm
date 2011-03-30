@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import android.content.Context;
 import android.media.Ringtone;
@@ -22,6 +22,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.preference.RingtonePreference;
 import android.util.AttributeSet;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * The RingtonePreference does not have a way to get/set the current ringtone so

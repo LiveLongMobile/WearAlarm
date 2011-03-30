@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 //import android.R;
 
@@ -35,6 +35,8 @@ import android.os.Vibrator;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * Manages alarms and vibe. Runs as a service so that it can continue to play

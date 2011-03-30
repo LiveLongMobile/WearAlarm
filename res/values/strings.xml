@@ -273,6 +273,14 @@
     <string name="intent_service">com.wearalarm.liveview.wearalarmservice</string>
     <string name="application_description">Extends:com.sonyericsson.extras.liveview</string>
 	<!--  DW end LiveView strings -->
+	
+	<!--  DW begin customized strings -->
+	<string name="send_logs">Send Log Files</string>
+	<string name="send_logs_to_developers">Send log files to developers to help debug issues.</string>
+	<string name="log_file_not_available_insert_sdcard">Log file not available.  Please insert SDCard or unplug USB cable from computer</string>
+	<string name="send_mail">Send Mail...</string>
+	<!--  DW end customized strings -->
+	
 
 </resources>
 

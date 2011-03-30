@@ -36,7 +36,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
-import android.util.Log;
+import com.livelongmobile.wearalarm.Log;
 
 /**
  * Base implementation of the plug-in service.

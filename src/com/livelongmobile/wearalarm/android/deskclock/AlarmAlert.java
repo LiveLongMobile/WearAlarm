@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import java.util.Calendar;
 
@@ -35,6 +35,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * Alarm Clock alarm alert: pops visible indicator and plays alarm

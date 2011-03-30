@@ -33,7 +33,7 @@ import android.content.SharedPreferences;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
-import android.util.Log;
+import com.livelongmobile.wearalarm.Log;
 
 public class WearAlarmService extends AbstractPluginService {
 	

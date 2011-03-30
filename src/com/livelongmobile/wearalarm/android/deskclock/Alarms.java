@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import java.util.Calendar;
 

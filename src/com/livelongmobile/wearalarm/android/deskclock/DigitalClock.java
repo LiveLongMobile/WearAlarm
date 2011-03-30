@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
@@ -32,6 +32,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * Displays the time

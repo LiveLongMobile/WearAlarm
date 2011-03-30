@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import static android.os.BatteryManager.BATTERY_STATUS_CHARGING;
 import static android.os.BatteryManager.BATTERY_STATUS_FULL;
@@ -58,6 +58,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.livelongmobile.wearalarm.R;
+
 /**
  * DeskClock clock view for desk docks.
  */
@@ -71,7 +73,7 @@ public class DeskClock extends Activity {
     private static final String MUSIC_PACKAGE_ID = "com.android.music";
 
     // Alarm action for midnight (so we can update the date display).
-    private static final String ACTION_MIDNIGHT = "com.android.deskclock.MIDNIGHT";
+    private static final String ACTION_MIDNIGHT = "com.livelongmobile.wearalarm.android.deskclock.MIDNIGHT";
 
     // Intent to broadcast for dock settings.
     private static final String DOCK_SETTINGS_ACTION = "com.android.settings.DOCK_SETTINGS";

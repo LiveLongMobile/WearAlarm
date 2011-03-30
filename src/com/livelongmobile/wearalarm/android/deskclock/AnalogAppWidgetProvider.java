@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import android.appwidget.AppWidgetManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * Simple widget to show analog clock.

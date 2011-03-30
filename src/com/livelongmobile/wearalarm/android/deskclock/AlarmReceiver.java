@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,6 +27,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Parcel;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * Glue class: connects AlarmAlert IntentReceiver to AlarmAlert

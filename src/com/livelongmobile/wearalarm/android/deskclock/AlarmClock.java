@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import java.util.Calendar;
 
@@ -44,6 +44,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
+
+import com.livelongmobile.wearalarm.R;
+import com.livelongmobile.wearalarm.WearAlarmSettings;
 
 /**
  * AlarmClock application.
@@ -352,7 +355,7 @@ public class AlarmClock extends Activity implements OnItemClickListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_item_settings:
-                startActivity(new Intent(this, SettingsActivity.class));
+                startActivity(new Intent(this, WearAlarmSettings.class));
                 return true;
 
 /*  [pjl] Removed DeskClock and Add Alarm options from home screen menu (in alarm_list_menu.xml)

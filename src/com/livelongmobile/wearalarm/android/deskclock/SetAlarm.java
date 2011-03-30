@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
@@ -39,6 +39,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * Manages each alarm

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -24,6 +24,8 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+
+import com.livelongmobile.wearalarm.R;
 
 /**
  * Settings for the Alarm Clock.

@@ -45,5 +45,10 @@
         android:entryValues="@array/volume_button_setting_values"
         android:summary="@string/volume_button_setting_summary"
         android:defaultValue="2" />
-
+   	
+   	<PreferenceScreen 
+		android:title="@string/send_logs"
+		android:key="send_logs"
+		android:summary="@string/send_logs_to_developers">
+	</PreferenceScreen>	
 </PreferenceScreen>

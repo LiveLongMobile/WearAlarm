@@ -28,7 +28,7 @@ import com.sonyericsson.extras.liveview.IPluginServiceV1;
 
 import android.graphics.Bitmap;
 import android.os.RemoteException;
-import android.util.Log;
+import com.livelongmobile.wearalarm.Log;
 
 public class LiveViewAdapter {
     

@@ -26,7 +26,7 @@ package com.sonyericsson.extras.liveview.plugins;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+import com.livelongmobile.wearalarm.Log;
 
 /**
  * Receives broadcast intents from LiveView service.

@@ -18,7 +18,7 @@
  * package-level logging flag
  */
 
-package com.android.deskclock;
+package com.livelongmobile.wearalarm.android.deskclock;
 
 import android.util.Config;
 
@@ -30,14 +30,14 @@ class Log {
     static final boolean LOGV = AlarmClock.DEBUG ? Config.LOGD : Config.LOGV;
 
     static void v(String logMe) {
-        android.util.Log.v(LOGTAG, /* SystemClock.uptimeMillis() + " " + */ logMe);
+    	com.livelongmobile.wearalarm.Log.v(LOGTAG, /* SystemClock.uptimeMillis() + " " + */ logMe);
     }
 
     static void e(String logMe) {
-        android.util.Log.e(LOGTAG, logMe);
+    	com.livelongmobile.wearalarm.Log.e(LOGTAG, logMe);
     }
 
     static void e(String logMe, Exception ex) {
-        android.util.Log.e(LOGTAG, logMe, ex);
+    	com.livelongmobile.wearalarm.Log.e(LOGTAG, logMe, ex);
     }
 }

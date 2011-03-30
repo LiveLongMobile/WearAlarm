@@ -33,7 +33,7 @@ import android.graphics.Matrix;
 import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
-import android.util.Log;
+import com.livelongmobile.wearalarm.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
